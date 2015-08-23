@@ -1,0 +1,5 @@
+<div ng-init="getUserList()">
+	<ul>
+		<li ng-repeat="user in users"><a href="/#/chat/{{ user.id }}"> {{ user.email }}</a></li>
+	</ul>
+</div>

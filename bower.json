@@ -1,0 +1,22 @@
+{
+  "name": "Angular App",
+  "version": "0.0.0",
+  "authors": [
+    "Rahman Usta"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.5.2",
+    "socket.io-client": "*",
+    "angular": "*",
+    "angular-route": "~1.4.4",
+    "angular-bootstrap": "~0.13.3"
+  }
+}

@@ -1,0 +1,11 @@
+<div>
+	<a href="/#/user-list">Geri</a>
+	<form name="messageForm" ui-keypress="{13:'sendMessage()'}">
+		<input type="text" ng-model="message" ui-keypress="{13:'sendMessage()'}">
+		<button ng-click="sendMessage()">Gönder</button>
+	</form>
+
+	<ul class="message-list" ng-init="getMessageHistory(loginUserId, messagingUser)">
+		<li class="message-line" ng-repeat="msg in messages" ng-class="loginUserId == msg.sender ? 'text-right' : 'text-left'">{{ msg.message }}</li>
+	</ul>
+</div>
