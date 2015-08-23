@@ -1,18 +1,22 @@
 .message-line.text-right {
-    background-color: #b6efff;
+    background-color: #C9EDF7;
 }
 
 .message-line.text-left {
-    background-color: #FFFFCC;
+    background-color: #ECF8F9;
 }
 
-.text-right, .text-left {
-    border-radius: 10px;
-}
-.text-right + .text-right {
-    border-radius: 0px;
+.text-right + .text-left, .text-left + .text-right {
+    border-radius: 10px 10px 0 0;
 }
 
-.text-left + .text-left {
-    border-radius: 0px;
+.message-list > :first-child {
+    border-radius: 10px 10px 0 0;
 }
+
+.message-list > :last-child {
+    border-radius: 0 0 10px 10px;
+}
+
+
+

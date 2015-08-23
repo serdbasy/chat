@@ -55,7 +55,7 @@ app.controller('ChatController', function ($scope, $http, $location, $routeParam
 
 //	$scope.getMessageHistory($scope.loginUserId, $routeParams.id);
 	$scope.getUserList = function () {
-		$http.get('user').success(function (data) {
+		$http.get('user/' + loginUser.id).success(function (data) {
 			console.log('kullanıcı listesi');
 			console.log(data);
 			$scope.users = data;

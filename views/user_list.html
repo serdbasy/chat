@@ -1,4 +1,7 @@
 <div ng-init="getUserList()">
+	<p>
+		Şimdiye kadar sistemi kullanmış tüm kullanıcı listesini görmektesiniz.
+	</p>
 	<ul>
 		<li ng-repeat="user in users"><a href="/#/chat/{{ user.id }}"> {{ user.email }}</a></li>
 	</ul>

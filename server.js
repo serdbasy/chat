@@ -58,9 +58,13 @@ app.post('/user/add', function(req, res){
 	}
 });
 
-app.get('/user', function (req, res){
+app.get('/user/:loginId', function (req, res){
 	var userList = [];
-	User.find({}).sort({email : 1}).exec(function(err, data){
+	User.find({
+		_id : {
+			$ne : req.params["loginId"]
+		}
+	}).sort({email : 1}).exec(function(err, data){
 		data.forEach(function(v){
 			console.log(v._id, v.email);
 			userList.push({id: v._id, email:v.email});
